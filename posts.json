@@ -1,0 +1,16 @@
+[
+    {
+        "title": "My first post",
+        "summary": "This is my first post and i'm really excited to make this project work",
+        "date": "September 9, 2025",
+        "slug": "my-first-post",
+        "content": "this is the complete content about my project"
+    },
+    {
+        "title": "My second post",
+        "summary": "This is my second post and i'm really excited to make this project work",
+        "date": "September 10, 2025",
+        "slug": "my-second-post",
+        "content": "this is the complete content about my project"
+    }
+]
