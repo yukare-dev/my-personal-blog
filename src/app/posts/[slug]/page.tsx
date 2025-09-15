@@ -1,9 +1,10 @@
 import { notFound } from "next/navigation";
 import fs from "fs";
 import path from "path";
-import { Post } from "@/app/_lib/definition";
 import React, { Usable } from "react";
 import Image from "next/image";
+import { Post } from "@/app/_lib/definition";
+import LikeButton from "@/app/_components/LikeButton";
 
 function getPostBySlug(slug: string): Post | undefined {
   const filePath = path.join(process.cwd(), "posts.json");
@@ -40,6 +41,9 @@ export default function PostPage({
       <p className="font-raleway text-gray-500 text-sm">{post.date}</p>
       <div className="prose lg:prose-xl">
         <p>{post.summary}</p>
+      </div>
+      <div>
+        <LikeButton />
       </div>
     </article>
   );
