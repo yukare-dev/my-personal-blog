@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Script from "next/script";
 import { Cinzel_Decorative, Raleway } from "next/font/google";
 import "./globals.css";
+import Link from "next/link";
 
 const cinzel = Cinzel_Decorative({
   variable: "--font-cinzel",
@@ -30,11 +31,14 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${raleway.variable} ${cinzel.variable} antialiased`}>
         <header>
-          <nav className="border-1 flex">
+          <nav className="flex shadow-md">
             <ul className="flex justify-center gap-6 p-4 w-full font-raleway">
-              <li className="cursor-pointer">home</li>
-              <li className="cursor-pointer">about me</li>
-              <li className="cursor-pointer">archives</li>
+              <Link href="/" className="cursor-pointer">
+                home
+              </Link>
+              <Link href="/about" className="cursor-pointer">
+                about me
+              </Link>
             </ul>
           </nav>
         </header>
